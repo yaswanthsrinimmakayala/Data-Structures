@@ -195,14 +195,31 @@ void delete_num(int num)
         }
         
     }
-
 }
-
-
-
-
 };
 int main()
 {
     DLinkedlist list;
+    // insert_at_head()
+// inssert_at_last()
+// insertbefore()
+// insertafter()
+// DisplayfromFront() 
+// delete_at_head()
+// delete_at_end()
+// ReverseDL()
+// search()
+// delete_num()
+    list.insert_at_head(1);
+    list.insert_at_last(2);
+    list.insert_at_last(4);
+    list.insertbefore(4,3);
+    list.insertafter(4,5);
+    list.Displayfromfront();
+    list.reverseDL();
+    list.Displayfromfront();
+    list.search(2);
+    list.deleteathead();
+    list.deleteatend();
+    list.delete_num(3);
 }
