@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-class Node
+class Node // this class represents the node in DL
 {
     public:
     int data;
     Node *next;
     Node *prev;
-    Node(int data)
+    Node(int data) //constructor
     {
         this->data=data;
         this->next=nullptr;
@@ -20,7 +20,7 @@ class DLinkedlist
     public:
     DLinkedlist()
     {
-        head=nullptr;
+        head=nullptr;  //creating an empty linkedlist
     }
 // created some functions like 
 // insert_at_head()
@@ -33,7 +33,7 @@ class DLinkedlist
 // ReverseDL()
 // search()
 // delete_num()
-    void insert_at_head(int data)
+    void insert_at_head(int data)  //inserts the data at the head
     {
         Node *newNode = new Node(data);
         if(head==nullptr)
@@ -47,7 +47,7 @@ class DLinkedlist
         newNode->prev = head;
 
     }
-    void insert_at_last(int data)
+    void insert_at_last(int data) //insert the data at the end
     {
         Node *newNode = new Node(data);
         if(head == nullptr)
@@ -68,7 +68,7 @@ class DLinkedlist
         }
         
     }
-    void Displayfromfront()
+    void Displayfromfront() // displays the data from head
     {
         Node *temp = head;
         cout<<"head";
@@ -80,7 +80,7 @@ class DLinkedlist
         cout<<temp->data;
         cout<<"nullptr"<<endl;
     }
-    void insertafter(int num, int data)
+    void insertafter(int num, int data) //inserts data after the num
     {
          Node *temp = head;
          while(temp->data!=num)
@@ -92,7 +92,7 @@ class DLinkedlist
          temp->next=newNode;
          newNode->prev = temp;
     }
-    void insertbefore(int num,int data)
+    void insertbefore(int num,int data) //inserts data before the num
     {
         Node *temp = head;
         while(temp->data!=num)
@@ -104,7 +104,7 @@ class DLinkedlist
         temp->prev->next=newNode;
         newNode->prev = newNode;
     }
-    void deleteathead()
+    void deleteathead() // deletes the data at the head
     {
         Node *temp=head;
         if(head==nullptr)
@@ -115,7 +115,7 @@ class DLinkedlist
         temp->prev=temp;
         delete temp;
     }
-    void deleteatend()
+    void deleteatend() //deletes the data at the end
     {
         Node *temp = head;
         if(head==nullptr)
@@ -129,7 +129,7 @@ class DLinkedlist
         temp->prev->next=nullptr;
         delete temp;
     }
-    Node* reverseDL()
+    Node* reverseDL() // reverses the linked list
 {
     Node *temp = head;
     if(temp == nullptr or temp->next == nullptr)
@@ -154,7 +154,7 @@ class DLinkedlist
         return head;
     } 
 }
-int search(int num)
+int search(int num) // returns the index of the num (0-indexed) and returns -1 when the num not found
 {
     int count = 0;
     Node *temp=head;
@@ -171,7 +171,7 @@ int search(int num)
     }
     return -1;
 }
-void delete_num(int num)
+void delete_num(int num) // deletes the num in the linked ;ist
 {
     Node *temp = head;
     if(head->data==num)
@@ -199,7 +199,7 @@ void delete_num(int num)
 };
 int main()
 {
-    DLinkedlist list;
+    DLinkedlist list; //object
     // insert_at_head()
 // inssert_at_last()
 // insertbefore()
