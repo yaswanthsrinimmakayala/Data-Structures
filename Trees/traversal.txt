@@ -1,0 +1,16 @@
+traversal is of two types:
+1. breadth first
+2. depth first
+inorder,postorder,preorder
+inorder (root in between, Left->Right)
+preorder (root in begining,left->Right)
+postorder (root in end,left->Right)
+
+BFS:
+10 20 30
+Inorder:
+20,10,30
+Preorder:
+10,20,30
+postorder:
+20,30,10

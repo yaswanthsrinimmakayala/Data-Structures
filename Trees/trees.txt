@@ -1,0 +1,65 @@
+trees are non linear data structures
+hierarchical realtionship is there between levels
+trees are basically directed
+we can go from top to bottom 
+but we can not go from bottom to top.
+links are unidirectional
+the  node  which does not have any parent is called root
+remaining are nodes
+the nodes which does not have child are called leaf nodes
+
+Ancestor and Descendent
+Ancestor -> any preecessor node on the path fron the root to that node
+A->C->G->L
+A,C,G are Ancestor of L
+Descendent -> any successor node the path from that node to leaf node
+A->C->G-L
+C ,G ,L are descendent of A
+
+subtree_
+node with with all its descendents
+
+sibling:
+all the child of same parent
+
+degree:
+no of child of that node
+
+degree of tree: max degree of any node
+
+depth is the distance from root to that node
+
+height of a node is the distance from leaf 
+like distance of the node to the leaf node
+(take maximum distance as height)
+doubt
+//level of the node == depth of the node
+//level of the tree == height of the tree
+
+
+maximum number of nodes possible in a tree of height h is 2pow(h+1) - 1
+minimum number of nodes possible in a tree of height h is h+1
+
+full/proper/strict
+in this tree every node can have 2 or 0 childs
+no of leaf node =  no of internal nodes +1
+
+
+Complete binary tree
+the nodes should be as left as possible
+every node should have two child except the last level
+
+                Max Nodes    Min Nodes  
+binary tree  n=   2^(h+1)-1    h+1
+full binary  n=   2^(h+1)-1    2^h +1
+completeBinaryn=  2^(h+1)-1    2^h
+               Min height   Max height
+
+
+perfect binary tree
+all internal nodes have 2 child
+all the leaf nodes should be at same level
+
+Degenrate Binary tree
+each internal node has one child
+itis also called right or left skewed binary tree
